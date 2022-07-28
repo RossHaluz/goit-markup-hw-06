@@ -653,6 +653,7 @@ img {
   width: 448px;
   height: 40px;
   padding-left: 42px;
+  transition: border-color var(--transition);
 }
 .modal-label > .modal-comment {
   margin-bottom: 4px;
@@ -670,6 +671,7 @@ img {
 .modal-icon {
   width: 18px;
   height: 18px;
+  transition: fill var(--transition);
 }
 .modal-position-icon {
   position: relative;
@@ -680,7 +682,12 @@ img {
   left: 12px;
   transform: translateY(-50%);
 }
-
+.modal-label:hover .modal-icon {
+  fill: var(--hover-text-color);
+}
+.modal-label:hover .modal-input {
+  border-color: var(--hover-text-color);
+}
 .primes {
   display: flex;
   justify-content: center;
