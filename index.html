@@ -475,6 +475,59 @@
     <!-- Backdrop modal -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
+        <form class="modal-form">
+          <strong class="modal-title"
+            >Залиште свої дані, ми вам передзвонимо</strong
+          >
+          <label class="modal-label">
+            <span class="modal-name">Ім'я</span>
+            <div class="modal-position-icon">
+              <input type="text" name="user-name" class="modal-input" />
+              <svg class="modal-icon">
+                <use href="./image/icons.svg#person-black"></use>
+              </svg>
+            </div>
+          </label>
+          <label class="modal-label">
+            <span class="modal-name">Телефон</span>
+            <div class="modal-position-icon">
+              <input type="tel" name="user-tel" class="modal-input" />
+              <svg class="modal-icon">
+                <use href="./image/icons.svg#phone-black"></use>
+              </svg>
+            </div>
+          </label>
+          <label class="modal-label">
+            <span class="modal-name">Пошта</span>
+            <div class="modal-position-icon">
+              <input type="email" name="user-mail" class="modal-input" />
+              <svg class="modal-icon">
+                <use href="./image/icons.svg#email-black"></use>
+              </svg>
+            </div>
+          </label>
+          <label class="modal-label">
+            <span>Коментар</span>
+            <textarea
+              name="modal-comment"
+              placeholder="Введіть текст"
+              class="modal-comment"
+            ></textarea>
+          </label>
+          <label class="primes">
+            <input
+              type="checkbox"
+              name="primes"
+              value="primes"
+              class="primes-checkbox"
+            />
+            <p class="primes-text">
+              Погоджуюся з розсилкою та приймаю
+              <a href="" class="primes-link link">Умови договору</a>
+            </p>
+          </label>
+          <button type="submit" class="modal-btn">Відправити</button>
+        </form>
         <button class="btr-xmart" data-modal-close>
           <svg class="icon-xmark" width="10" height="10">
             <use href="./image/icons.svg#icon-xmark"></use>
@@ -543,6 +596,27 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div class="subscription">
+          <h2 class="subscription-title">Підпишіться на розсилку</h2>
+          <form class="subscription-form">
+            <div class="flex-form">
+              <label class="subscription-lable">
+                <span class="visually-hidden">ПІДПИШІТЬСЯ</span>
+                <input
+                  type="email"
+                  placeholder="E-mail"
+                  class="subscription-input"
+                />
+              </label>
+              <button type="submit" class="subscription-btn">
+                Підписатися
+                <svg width="24" height="24" class="icon-subscription">
+                  <use href="./image/icons.svg#icon-send"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </footer>

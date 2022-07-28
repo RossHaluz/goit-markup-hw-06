@@ -24,6 +24,7 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--second-text-color);
+  padding-top: 81px;
 }
 .no-scroll {
   overflow: hidden;
@@ -76,6 +77,12 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   border-bottom: 1px solid #ececec;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--bg-main-color);
+  z-index: 999;
 }
 
 .logo {
@@ -401,11 +408,15 @@ img {
 }
 
 .footer-flex-conteiner {
-  gap: 70px;
   display: flex;
   align-items: baseline;
 }
-
+.address {
+  margin-right: 70px;
+}
+.footer-subscribe {
+  margin-right: 93px;
+}
 .footer-join {
   display: flex;
   margin-bottom: 20px;
@@ -416,7 +427,50 @@ img {
 .footer .team-soicial-link {
   fill: var(--white-text-color);
 }
-
+.subscription-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-text-color);
+  margin-bottom: 20px;
+}
+.subscription-input {
+  width: 358px;
+  padding: 15px 0 15px 16px;
+  background-color: transparent;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: calc(20 / 16);
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+}
+.subscription-btn {
+  display: flex;
+  align-items: center;
+  padding: 10px 28px;
+  background-color: var(--hover-text-color);
+  border-radius: 4px;
+  border: none;
+  color: var(--white-text-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+  margin-left: 12px;
+  width: 200px;
+}
+.icon-subscription {
+  margin-left: 10px;
+  fill: currentColor;
+}
+.flex-form {
+  display: flex;
+  align-items: center;
+}
 /* Портфоліо */
 .portfolio-filter-list {
   margin-bottom: 50px;
@@ -521,6 +575,7 @@ img {
   opacity: 1;
   width: 100%;
   height: 100%;
+  z-index: 1000;
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity var(--transition), visibility var(--transition);
 }
@@ -536,6 +591,7 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
+  padding: 40px;
   width: 528px;
   height: 581px;
   background: var(--bg-main-color);
@@ -565,4 +621,96 @@ img {
 .btr-xmart:hover {
   border-color: var(--hover-text-color);
   fill: var(--hover-text-color);
+}
+
+/* Modal */
+.modal-form .modal-title {
+  display: block;
+  text-align: center;
+  margin-bottom: 12px;
+  font-size: 20px;
+  line-height: calc(23 / 20);
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
+.modal-label {
+  display: flex;
+  flex-direction: column;
+}
+.modal-label:not(:last-child) {
+  margin-bottom: 10px;
+}
+.modal-label > .modal-name {
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: var(--second-text-color);
+}
+.modal-label .modal-input {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  width: 448px;
+  height: 40px;
+  padding-left: 42px;
+}
+.modal-label > .modal-comment {
+  margin-bottom: 4px;
+  resize: none;
+  width: 448px;
+  height: 120px;
+  padding: 12px 16px;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.modal-icon {
+  width: 18px;
+  height: 18px;
+}
+.modal-position-icon {
+  position: relative;
+}
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+}
+
+.primes {
+  display: flex;
+  justify-content: center;
+}
+.primes-text {
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  color: var(--second-text-color);
+}
+.primes-link {
+  color: var(--hover-text-color);
+  text-decoration: underline;
+}
+.modal-btn {
+  display: flex;
+  margin: 0 auto;
+  padding: 10px 52px;
+  background-color: var(--hover-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+  color: var(--white-text-color);
+  border: none;
+  margin-top: 30px;
+  transition: background-color var(--transition);
+}
+.modal-btn:hover {
+  background-color: var(--button-hover);
 }
