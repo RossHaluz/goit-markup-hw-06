@@ -437,6 +437,7 @@ img {
   margin-bottom: 20px;
 }
 .subscription-input {
+  outline: 0;
   width: 358px;
   padding: 15px 0 15px 16px;
   background-color: transparent;
@@ -654,9 +655,11 @@ img {
   height: 40px;
   padding-left: 42px;
   transition: border-color var(--transition);
+  outline: transparent;
 }
 .modal-label > .modal-comment {
   margin-bottom: 4px;
+  outline: none;
   resize: none;
   width: 448px;
   height: 120px;
@@ -664,9 +667,12 @@ img {
   font-size: 12px;
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+}
+.modal-comment:hover,
+.modal-comment:focus {
+  border-color: var(--hover-text-color);
 }
 .modal-icon {
   width: 18px;
@@ -682,15 +688,20 @@ img {
   left: 12px;
   transform: translateY(-50%);
 }
-.modal-label:hover .modal-icon {
+.modal-label:hover .modal-icon,
+.modal-label:focus .modal-icon {
   fill: var(--hover-text-color);
 }
-.modal-label:hover .modal-input {
+.modal-label:hover .modal-input,
+.modal-label:focus .modal-input {
   border-color: var(--hover-text-color);
 }
 .primes {
   display: flex;
+  align-items: center;
   justify-content: center;
+  gap: 7px;
+  margin-bottom: 30px;
 }
 .primes-text {
   font-size: 14px;
@@ -701,6 +712,7 @@ img {
 .primes-link {
   color: var(--hover-text-color);
   text-decoration: underline;
+  text-underline-position: under;
 }
 .modal-btn {
   display: flex;
@@ -720,4 +732,15 @@ img {
 }
 .modal-btn:hover {
   background-color: var(--button-hover);
+}
+.icon-check {
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+.primes-checkbox:checked + .primes-icons .primes-unchecked {
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+.primes-checkbox:checked + .primes-icons .icon-check {
+  opacity: 1;
 }

@@ -529,12 +529,22 @@
               type="checkbox"
               name="primes"
               value="primes"
-              class="primes-checkbox"
+              class="primes-checkbox visually-hidden"
             />
-            <p class="primes-text">
+            <svg class="primes-icons" width="16" height="15">
+              <use
+                href="./image/icons.svg#primes_unchecked"
+                class="primes-unchecked"
+              ></use>
+              <use
+                href="./image/icons.svg#primes_check"
+                class="icon-check"
+              ></use>
+            </svg>
+            <span class="primes-text">
               Погоджуюся з розсилкою та приймаю
               <a href="" class="primes-link link">Умови договору</a>
-            </p>
+            </span>
           </label>
           <button type="submit" class="modal-btn">Відправити</button>
         </form>
